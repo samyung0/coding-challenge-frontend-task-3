@@ -1,61 +1,36 @@
-# Overview
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Develop a custom Crypto-Wallet Connect Button Component to integrate with the MetaMask Chrome Extension using Next.js (version 12.3.4), TypeScript, [RainbowKit](https://www.rainbowkit.com/docs/custom-connect-button) and [SIWE](https://www.npmjs.com/package/siwe). This component should encapsulate all necessary wallet authentication steps, including wallet connection, message signing, signature verification, and error handling. The challenge aims to assess your ability to create dynamic, reusable, scalable, and extensible UI components.
+## Getting Started
 
-## Objectives
+First, run the development server:
 
-While the default ConnectButton provided by RainbowKit offers basic connection functionality, your task is to create a Custom ConnectButton that enhances wallet authentication processes, including user confirmation, message signing, signature verification, and comprehensive error handling.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### 1. Crypto-Wallet Connect Button Component
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Utilize [RainbowKit](https://www.rainbowkit.com/docs/custom-connect-button) and [SIWE](https://www.npmjs.com/package/siwe) for the implementation.
-- Serve as an abstract wrapper that provides all necessary wallet authentication functionalities but allows for custom children to define the button's UI.
-- Implement the required authentication steps (Note: The UIs below are for illustration purposes only and do not require implementation):
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-  1. User clicks on Crypto-Wallet Connect Button.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-  ![connect](docs/connect.jpg "connect")
+## Learn More
 
-  2. Open `RainbowKit Modal` to connect via `MetaMask`.
+To learn more about Next.js, take a look at the following resources:
 
-  ![metamask](docs/metamask.jpg "metamask")
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-  3. User connects the wallet within the `MetaMask Chrome Extension`.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-  ![connect-metamask](docs/connect-metamask.jpg "connect-metamask")
+## Deploy on Vercel
 
-  4. After a successful connection, prompt the user to confirm the connecting wallet address.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-  ![confirm-address](docs/confirm-address.jpg "confirm-address")
-
-  5. Prompt the user to sign a custom message within `MetaMask Chrome Extension`.
-
-  ![sign-message](docs/sign-message.jpg "sign-message")
-
-  6. Verify the signature post-signature. If valid, display the connected wallet address.
-
-### 4. **Bonus:** UI/UX Design
-
-- Ensure that the webpage is responsive and adapt to different screen sizes, especially mobile devices.
-- Use SCSS or a UI framework / library of your choice for styling.
-
-### 5. **Bonus:** Verify Wallet Signature from API
-
-- Develop a mock API endpoint within the Next.js project for wallet signature verification.
-- Modify `src/pages/index.tsx` to validate the wallet signature through this API.
-
-## Requirements
-
-- TypeScript and ES6+ code.
-- Emphasis on maintainability and understandable code structure.
-- Flexibility to modify the provided starter code.
-- Option to use additional libraries to complete the task.
-
-## Evaluation Criteria
-
-- Functionality: The component must be fully functional, satisfying all stated objectives and requirements.
-- Reusability and Scalability: Design components with reusability, extensibility, and scalability in mind.
-- Responsiveness: The webpage should be responsive and mobile-friendly.
-- Code Quality: Code should be clean, well-organized, and follow best practices.
-- UI Design (Plus, not primary): A user-friendly and aesthetically pleasing UI is a plus, but the primary focus is on functionality and code quality.
-- API Interaction (Bonus): Demonstrated ability to interact with APIs for enhanced functionality will be regarded as a bonus.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -1,6 +1,6 @@
 import { SiweMessage } from "siwe";
 
-export const signingMessage = async (address: string, nonce: string) => {
+export const getSiweMessage = (address: string, nonce: string) => {
     let statement = "Welcome to MOONGATE!\n\n";
     statement += `By signing, you accept the MOONGATE Terms of Service and Privacy Policy.`;
     statement +=
